@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
     section: {
         alignItems: 'center',
         justifyContent: 'center',
-        gap: 40,
-        padding: 50,
+        gap: 50,
+        padding: '15%',
     },
     aside: {
         width: '100%',

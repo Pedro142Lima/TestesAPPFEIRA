@@ -61,7 +61,7 @@ export default function Home() {
                         resizeMode="cover"
                     >
                         <View style={styles.section}>
-                            <View style={styles.aside}>
+                            
                                 <TouchableOpacity
                                     style={styles.consulta}
                                     onPress={() => navegacao.navigate('Consulta')}
@@ -69,7 +69,7 @@ export default function Home() {
 
                                     <Text style={styles.textConsulta}>CONSULTA</Text>
                                 </TouchableOpacity>
-                            </View>
+                           
 
                             <View style={styles.input}>
 
