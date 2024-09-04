@@ -13,7 +13,7 @@ export default function Home() {
     const data = [
         { key: '3ºAndar', value: '3ºAndar', },
         { key: '2ºAndar', value: '2ºAndar' },
-        { key: '1ºAndar', value: '3ºAndar' },
+        { key: '1ºAndar', value: '1ºAndar' },
         { key: 'Pátio', value: 'Pátio', },
     ]
     const Salas = {
@@ -46,7 +46,6 @@ export default function Home() {
 
         <SafeAreaView>
             <ScrollView>
-
                 <View style={styles.container}>
 
                     <View style={styles.header}>
