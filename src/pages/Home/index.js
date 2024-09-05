@@ -18,27 +18,27 @@ export default function Home() {
     ]
     const Salas = {
         'Pátio': [
-            { key: '1', value: 'Sala4', },
-            { key: '2', value: 'Sala5', },
-            { key: '3', value: 'Sala6', },
+            { key: '1', value: 'Sala 4', },
+            { key: '2', value: 'Sala 5', },
+            { key: '3', value: 'Sala 6', },
         ],
         '1ºAndar': [
-            { key: '4', value: 'Sala15', },
-            { key: '5', value: 'Sala16', },
-            { key: '6', value: 'Sala17', },
-            { key: '7', value: 'Sala18', },
-            { key: '8', value: 'Sala19', },
-            { key: '9', value: 'Sala20', },
+            { key: '4', value: 'Sala 15', },
+            { key: '5', value: 'Sala 16', },
+            { key: '6', value: 'Sala 17', },
+            { key: '7', value: 'Sala 18', },
+            { key: '8', value: 'Sala 19', },
+            { key: '9', value: 'Sala 20', },
         ],
         '2ºAndar': [
-            { key: '10', value: 'Sala24', },
-            { key: '11', value: 'Sala25', },
-            { key: '12', value: 'Sala26', },
-            { key: '13', value: 'Sala27', },
+            { key: '10', value: 'Sala 24', },
+            { key: '11', value: 'Sala 25', },
+            { key: '12', value: 'Sala 26', },
+            { key: '13', value: 'Sala 27', },
         ],
         '3ºAndar': [
-            { key: '14', value: 'Sala30', },
-            { key: '15', value: 'Sala33', },
+            { key: '14', value: 'Sala 30', },
+            { key: '15', value: 'Sala 33', },
         ],
     }
 
@@ -60,23 +60,24 @@ export default function Home() {
                         resizeMode="cover"
                     >
                         <View style={styles.section}>
-                            
-                                <TouchableOpacity
-                                    style={styles.consulta}
-                                    onPress={() => navegacao.navigate('Consulta')}
-                                >
 
-                                    <Text style={styles.textConsulta}>CONSULTA</Text>
-                                </TouchableOpacity>
-                           
+                            <TouchableOpacity
+                                style={styles.consulta}
+                                onPress={() => navegacao.navigate('Consulta')}
+                            >
+
+                                <Text style={styles.textConsulta}>CONSULTA</Text>
+                            </TouchableOpacity>
+
 
                             <View style={styles.input}>
 
                                 <SelectList
-                                    boxStyles={{ borderRadius: 0, backgroundColor:'#fff' }}
-                                    inputStyles={{color:'#000', fontWeight:'300'}}
-                                    dropdownStyles={{borderRadius: 0, backgroundColor:'#fff'}}
-                                    dropdownTextStyles={{color:'#000', fontWeight:'300'}}
+                                    boxStyles={{ borderRadius: 0, backgroundColor: '#fff' }}
+                                    inputStyles={{ color: '#000', fontWeight: '300' }}
+                                    dropdownStyles={{ borderRadius: 0, backgroundColor: '#fff' }}
+                                    dropdownItemStyles={{ borderStyle: 'solid', borderColor: '#000', borderWidth: 0.5 }}
+                                    dropdownTextStyles={{ color: '#000', fontWeight: '300' }}
 
                                     setSelected={(val) => setSelected(val)}
                                     data={data}
@@ -84,10 +85,11 @@ export default function Home() {
                                     defaultOption={'Pátio'}
                                 />
                                 <SelectList
-                                    boxStyles={{ borderRadius: 0, backgroundColor:'#fff' }}
-                                    inputStyles={{color:'#000', fontWeight:'300'}}
-                                    dropdownStyles={{borderRadius: 0, backgroundColor:'#fff'}}
-                                    dropdownTextStyles={{color:'#000', fontWeight:'300'}}
+                                    boxStyles={{ borderRadius: 0, backgroundColor: '#fff' }}
+                                    inputStyles={{ color: '#000', fontWeight: '300' }}
+                                    dropdownStyles={{ borderRadius: 0, backgroundColor: '#fff' }}
+                                    dropdownItemStyles={{ borderStyle: 'solid', borderColor: '#000', borderWidth: 0.5 }}
+                                    dropdownTextStyles={{ color: '#000', fontWeight: '300' }}
 
                                     setSelected={(val) => setSalas(val)}
                                     data={Salas[selected]}
