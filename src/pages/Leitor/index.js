@@ -73,7 +73,7 @@ export default function Leitor() {
     navegacao.navigate('Home')
     alert(`QR-CODE scanneado com sucesso!`);
     
-    // Enviar o QR Code para a API
+ 
     enviarQRCodeParaAPI(data);
   };
   
