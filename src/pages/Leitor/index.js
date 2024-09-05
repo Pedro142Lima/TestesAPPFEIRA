@@ -7,6 +7,28 @@ import styles from './styles';
 
 export default function Leitor() {
 
+  const enviarQRCodeParaAPI = async (qrCode) => {
+    try {
+      const response = await fetch('http://localhost:3000/api/qrcode', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ qrCode }),
+      });
+  
+      const data = await response.json();
+      if (response.ok) {
+        console.log('QR Code enviado com sucesso:', data);
+      } else {
+        console.error('Erro ao enviar QR Code:', data);
+      }
+    } catch (error) {
+      console.error('Erro na requisição:', error);
+    }
+  };
+  
+
   const navegacao = useNavigation()
 
   const [facing, setFacing] = useState(CameraType.back);
@@ -25,7 +47,11 @@ export default function Leitor() {
   const handleBarcodeScanned = ({ data }) => {
     setScanned(true);
     alert(`QR-CODE scanneado com sucesso!`);
+    
+    // Enviar o QR Code para a API
+    enviarQRCodeParaAPI(data);
   };
+  
 
   if (hasPermission === null) {
     return <Text>Precisamos da permissão do uso da câmera para funcionar. </Text>;
