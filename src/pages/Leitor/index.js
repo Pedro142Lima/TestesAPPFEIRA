@@ -1,5 +1,4 @@
-import { CameraView, useCameraPermissions, Camera } from 'expo-camera';
-import { CameraType } from 'expo-camera/build/legacy/Camera.types';
+import { CameraView, Camera } from 'expo-camera';
 import React, { useState, useEffect } from 'react';
 import { useNavigation } from "@react-navigation/native";
 import { Button, StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground } from 'react-native';
@@ -31,7 +30,6 @@ export default function Leitor() {
 
   const navegacao = useNavigation()
 
-  const [facing, setFacing] = useState(CameraType.back);
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
 
@@ -46,11 +44,14 @@ export default function Leitor() {
 
   const handleBarcodeScanned = ({ data }) => {
     setScanned(true);
+    navegacao.navigate('Home')
     alert(`QR-CODE scanneado com sucesso!`);
     
     // Enviar o QR Code para a API
     enviarQRCodeParaAPI(data);
   };
+  
+
   
 
   if (hasPermission === null) {
@@ -75,7 +76,7 @@ export default function Leitor() {
       <View style={styles.container}>
         <Image
           style={styles.image}
-          source={require('../../../assets/images/scanImg.png')}
+          source={require('../../../assets/images/scanningWhite.png')}
         />
       </View>
 

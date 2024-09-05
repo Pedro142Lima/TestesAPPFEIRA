@@ -2,6 +2,10 @@ import { StyleSheet } from "react-native";
 
 
 const styles = StyleSheet.create({
+    background: {
+        width: '100%',
+        height: '500vh'
+    },
     header: {
         alignItems: 'center',
         justifyContent: 'center',
@@ -10,7 +14,7 @@ const styles = StyleSheet.create({
     titulo: {
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: 30
+        fontSize: '8vw'
     },
     image: {
         width: 200,
@@ -35,7 +39,7 @@ const styles = StyleSheet.create({
         width: '80%',
         height: 50,
         textAlign: 'center',
-        justifyContent:'center',
+        justifyContent: 'center',
         backgroundColor: 'orange',
         borderRadius: 12
     },
@@ -43,7 +47,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: 30,
+        fontSize: '8vw',
     },
     consulta: {
         width: '50%',
@@ -56,7 +60,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: 20,
+        fontSize: '5vw',
     }
 });
 
