@@ -1,9 +1,10 @@
-import { View, Text, ImageBackground, Image, TouchableOpacity, ScrollView, SafeAreaView } from "react-native";
+import { View, Text, ImageBackground, Image, TouchableOpacity, FlatList, SafeAreaView } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import styles from "./styles";
+import { useState } from "react";
 
-// adiciona os inputs na segunda view
+// Falta só a list
 
 export default function Consulta() {
 
@@ -39,9 +40,11 @@ export default function Consulta() {
                         <Text style={styles.title}>Sala</Text>
                         <Text style={styles.title}>Data e Hora</Text>
                     </View>
-                    <ScrollView>
+
+                    <FlatList
                         
-                    </ScrollView>
+                    />
+
                 </View>
             </View>
 
