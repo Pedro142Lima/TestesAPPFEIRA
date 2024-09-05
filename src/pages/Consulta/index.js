@@ -42,7 +42,7 @@ export default function Consulta() {
                     </View>
 
                     <FlatList
-                        
+
                     />
 
                 </View>

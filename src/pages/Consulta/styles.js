@@ -1,24 +1,20 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    container: {
-        width: '100%',
-        height: '100%',
-    },
-    image: {
-        width: 150,
-        height: 150,
-    },
     section: {
         paddingTop: 50,
         alignItems: 'center',
         justifyContent: 'center',
         gap: 30
     },
+    image: {
+        width: 150,
+        height: 150,
+    },
     text: {
         fontWeight: "900",
         color: '#fff',
-        fontSize: 30
+        fontSize: '8vw'
     },
     button: {
         width: '50%',
@@ -32,7 +28,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: 30,
+        fontSize: '8vw',
     },
     sectionList: {
         backgroundColor: '#fff',
@@ -51,7 +47,7 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: "500",
         color: '#000',
-        fontSize: 15
+        fontSize: '4vw'
     },
 });
 

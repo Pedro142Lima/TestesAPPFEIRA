@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     titulo: {
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: 30
+        fontSize: '8vw'
     },
     image: {
         width: 200,
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: 30,
+        fontSize: '8vw',
     },
     consulta: {
         width: '50%',
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: 20,
+        fontSize: '5vw',
     }
 });
 
