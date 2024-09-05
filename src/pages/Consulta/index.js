@@ -12,13 +12,11 @@ export default function Consulta() {
 
     return (
         <SafeAreaView>
-
             <View style={styles.container}>
                 <ImageBackground
                     style={styles.background}
                     source={require('../../../assets/images/Background.png')}
                     resizeMode="cover"
-
                 >
                     <View style={styles.section}>
                         <Image
@@ -33,21 +31,20 @@ export default function Consulta() {
                             <Text style={styles.textButton}>VOLTAR</Text>
                         </TouchableOpacity>
                     </View>
-                </ImageBackground>
-                <View style={styles.sectionList}>
-                    <View style={styles.sectionRow}>
-                        <Text style={styles.title}>Visita</Text>
-                        <Text style={styles.title}>Sala</Text>
-                        <Text style={styles.title}>Data e Hora</Text>
+                    <View style={styles.sectionList}>
+                        <View style={styles.sectionRow}>
+                            <Text style={styles.title}>Visita</Text>
+                            <Text style={styles.title}>Sala</Text>
+                            <Text style={styles.title}>Data e Hora</Text>
+                        </View>
+
+                        <FlatList
+
+                        />
+
                     </View>
-
-                    <FlatList
-
-                    />
-
-                </View>
+                </ImageBackground>
             </View>
-
         </SafeAreaView>
     )
 }

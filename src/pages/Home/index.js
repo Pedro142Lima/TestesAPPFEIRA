@@ -43,10 +43,9 @@ export default function Home() {
     }
 
     return (
-
         <SafeAreaView>
             <ScrollView>
-                <View style={styles.container}>
+                <View style={styles.background}>
 
                     <View style={styles.header}>
                         <Text style={styles.titulo}>Validação de Entrada</Text>
@@ -108,7 +107,6 @@ export default function Home() {
                         </View>
                     </ImageBackground>
                 </View >
-
             </ScrollView>
         </SafeAreaView>
     )

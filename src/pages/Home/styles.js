@@ -2,6 +2,10 @@ import { StyleSheet } from "react-native";
 
 
 const styles = StyleSheet.create({
+    background: {
+        width: '100%',
+        height: '500vh'
+    },
     header: {
         alignItems: 'center',
         justifyContent: 'center',

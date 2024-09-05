@@ -1,6 +1,10 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+    background: {
+        width: '100vw',
+        height: '70vh'
+    },
     section: {
         paddingTop: 50,
         alignItems: 'center',
@@ -32,7 +36,7 @@ const styles = StyleSheet.create({
     },
     sectionList: {
         backgroundColor: '#fff',
-        width: '90%',
+        width: '85vw',
         height: '100%',
         alignItems: 'center',
         alignSelf: 'center',
