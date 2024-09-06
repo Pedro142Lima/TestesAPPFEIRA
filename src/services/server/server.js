@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 const port = 3000;
 
-// Conecte ao banco de dados SQLite
+
 const db = new sqlite3.Database('./qrCodes.db', (err) => {
   if (err) {
     console.error('Erro ao conectar ao SQLite:', err);
@@ -23,10 +23,10 @@ const db = new sqlite3.Database('./qrCodes.db', (err) => {
   }
 });
 
-// Crie a tabela qrCodes se não existir
+
 db.run(`CREATE TABLE IF NOT EXISTS qrCodes (id INTEGER PRIMARY KEY, code TEXT)`);
 
-// Endpoint para salvar QR Code
+
 app.post('/api/qrcode', (req, res) => {
   const { qrCode } = req.body;
 
@@ -42,7 +42,6 @@ app.post('/api/qrcode', (req, res) => {
   });
 });
 
-// Endpoint para buscar todos os QR Codes
 app.get('/api/qrcodes', (req, res) => {
   db.all(`SELECT * FROM qrCodes`, [], (err, rows) => {
     if (err) {
@@ -52,7 +51,8 @@ app.get('/api/qrcodes', (req, res) => {
   });
 });
 
-// Inicie o servidor na porta definida
+
+
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });

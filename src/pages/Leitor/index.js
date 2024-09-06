@@ -110,6 +110,7 @@ export default function Leitor() {
         style={styles.section}
         source={require('../../../assets/images/BackgroundInv.png')}
         resizeMode="cover"
+        
       >
         <Text style={styles.textButton}>Escaneie o QR-Code</Text>
         <TouchableOpacity

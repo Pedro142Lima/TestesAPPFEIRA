@@ -38,6 +38,7 @@ export default function Consulta() {
 
     return (
         <SafeAreaView>
+            
             <View style={styles.container}>
                 <ImageBackground
                     style={styles.background}

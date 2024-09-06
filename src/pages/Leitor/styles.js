@@ -1,5 +1,12 @@
 import { StyleSheet } from "react-native";
 
+import { Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
+const backVH = height * 0.50; // 5vw
+const fontSizeVW = width* 0.08; // 5vh
+
+
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
@@ -10,12 +17,12 @@ const styles = StyleSheet.create({
 
     },
     image: {
-        width: 200,
-        height: 200,
+        width: 300,
+        height: 300,
     },
     section: {
         width: '100%',
-        height: 300,
+        height: backVH,
         alignItems: 'center',
         justifyContent: 'center',
         gap: 40
@@ -32,7 +39,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: 30,
+        fontSize: fontSizeVW,
     }
 });
 
