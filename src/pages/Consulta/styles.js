@@ -1,4 +1,11 @@
 import { StyleSheet } from "react-native";
+import { Dimensions } from "react-native";
+
+const { width, height } = Dimensions.get('window');
+const listVW = width * 0.90; // 5vw
+const fontSizeVW = width * 0.07; // 5vw
+const fontSizeVH = height * 5; // 5vh
+
 
 const styles = StyleSheet.create({
     background: {
@@ -32,11 +39,11 @@ const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: 30,
+        fontSize: fontSizeVW,
     },
     sectionList: {
         backgroundColor: '#fff',
-        width: '85vw',
+        width: listVW,
         height: '100%',
         alignItems: 'center',
         alignSelf: 'center',
@@ -51,7 +58,7 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: "500",
         color: '#000',
-        fontSize: 30
+        fontSize: fontSizeVW
     },
 });
 
