@@ -1,10 +1,14 @@
 import { StyleSheet } from "react-native";
+import { Dimensions } from 'react-native';
 
+const { width, height } = Dimensions.get('window');
+const fontSizeVW = width * 0.06; // 5vw
+const fontSizeVH = height * 5; // 5vh
 
 const styles = StyleSheet.create({
     background: {
         width: '100%',
-        height: '500vh'
+        height: '100%',
     },
     header: {
         alignItems: 'center',
@@ -14,7 +18,7 @@ const styles = StyleSheet.create({
     titulo: {
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: '8vw'
+        fontSize: 30
     },
     image: {
         width: 200,
@@ -47,7 +51,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: '8vw',
+        fontSize: fontSizeVW,
     },
     consulta: {
         width: '50%',
@@ -60,7 +64,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: '5vw',
+        fontSize: fontSizeVW,
     }
 });
 

@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     text: {
         fontWeight: "900",
         color: '#fff',
-        fontSize: '8vw'
+        fontSize: 30
     },
     button: {
         width: '50%',
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         textAlign: 'center',
         fontWeight: "900",
-        fontSize: '8vw',
+        fontSize: 30,
     },
     sectionList: {
         backgroundColor: '#fff',
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: "500",
         color: '#000',
-        fontSize: '4vw'
+        fontSize: 30
     },
 });
 

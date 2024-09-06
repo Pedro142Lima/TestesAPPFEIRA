@@ -2,6 +2,7 @@ import { View, Text, ImageBackground, Image, TouchableOpacity, ScrollView, SafeA
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import styles from "./styles";
+import { Dimensions } from "react-native";
 
 
 export default function Home() {
@@ -9,6 +10,10 @@ export default function Home() {
     const navegacao = useNavigation()
     const [selected, setSelected] = React.useState("3ºAndar");
     const [salas, setSalas] = React.useState("");
+
+    const { width, height } = Dimensions.get('window');
+    const fontSizeVW = width * 0.06; // 5vw
+    const fontSizeVH = height * 0.68; // 5vh
 
     const data = [
         { key: '3ºAndar', value: '3ºAndar', },
@@ -44,7 +49,7 @@ export default function Home() {
 
     return (
         <SafeAreaView>
-            <ScrollView>
+            <ScrollView style={{display: 'flex'}}>
                 <View style={styles.background}>
 
                     <View style={styles.header}>
@@ -53,10 +58,13 @@ export default function Home() {
                             source={require('../../../assets/images/ilustracaoQr.png')}
                         >
                         </Image>
-                    </View>
+                </View>
                     <ImageBackground
                         source={require('../../../assets/images/BackgroundInv.png')}
                         resizeMode="cover"
+
+                        style={{   
+                        height: fontSizeVH}}
                     >
                         <View style={styles.section}>
 
