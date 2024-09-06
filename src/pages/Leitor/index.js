@@ -14,7 +14,7 @@ export default function Leitor() {
       )
     ]);
   };
-  
+
   const enviarQRCodeParaAPI = async (qrCode) => {
     try {
       const response = await fetchWithTimeout('http://192.168.100.10:3000/api/qrcode', {
@@ -24,7 +24,7 @@ export default function Leitor() {
         },
         body: JSON.stringify({ qrCode }),
       });
-      
+
       const data = await response.json();
       if (response.ok) {
         console.log('QR Code enviado com sucesso:', data);
@@ -35,7 +35,7 @@ export default function Leitor() {
       console.error('Erro na requisição:', error);
     }
   };
-  
+
   const buscarQRCodes = async () => {
     try {
       const response = await fetchWithTimeout('http://192.168.100.10:3000/api/qrcodes');
@@ -50,9 +50,9 @@ export default function Leitor() {
       console.error('Erro na requisição:', error);
     }
   };
-  
-  
-  
+
+
+
 
   const navegacao = useNavigation()
 
@@ -72,13 +72,11 @@ export default function Leitor() {
     setScanned(true);
     navegacao.navigate('Home')
     alert(`QR-CODE scanneado com sucesso!`);
-    
- 
     enviarQRCodeParaAPI(data);
   };
-  
 
-  
+
+
 
   if (hasPermission === null) {
     return <Text>Precisamos da permissão do uso da câmera para funcionar. </Text>;
@@ -110,7 +108,7 @@ export default function Leitor() {
         style={styles.section}
         source={require('../../../assets/images/BackgroundInv.png')}
         resizeMode="cover"
-        
+
       >
         <Text style={styles.textButton}>Escaneie o QR-Code</Text>
         <TouchableOpacity

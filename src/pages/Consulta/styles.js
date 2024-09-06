@@ -8,6 +8,8 @@ const listVH = height * 0.55; // 5vh
 const fontSizeVW = width * 0.07; // 5vw
 const fontSizeVH = height * 5; // 5vh
 
+const fontListSizeVW = width * 0.05; // 5vw
+
 
 const styles = StyleSheet.create({
     background: {
@@ -58,9 +60,9 @@ const styles = StyleSheet.create({
         gap: 50
     },
     title: {
-        fontWeight: "500",
+        fontWeight: "300",
         color: '#000',
-        fontSize: fontSizeVW
+        fontSize: fontListSizeVW
     },
 });
 

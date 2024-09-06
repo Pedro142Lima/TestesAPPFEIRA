@@ -10,7 +10,7 @@ export default function Consulta() {
     // Função para buscar QR Codes da API
     const buscarQRCodes = async () => {
         try {
-            
+
             const response = await fetch('http://192.168.100.10:3000/api/qrcodes');
             const data = await response.json();
             if (response.ok) {
@@ -23,12 +23,12 @@ export default function Consulta() {
         }
     };
 
-    
+
     useEffect(() => {
         buscarQRCodes();
     }, []);
 
-  
+
     const renderItem = ({ item }) => (
         <View style={styles.sectionRow}>
             <Text style={styles.title}>{item.id}</Text>
@@ -38,7 +38,7 @@ export default function Consulta() {
 
     return (
         <SafeAreaView>
-            
+
             <View style={styles.container}>
                 <ImageBackground
                     style={styles.background}
@@ -63,6 +63,7 @@ export default function Consulta() {
                         <View style={styles.sectionRow}>
                             <Text style={styles.title}>ID</Text>
                             <Text style={styles.title}>QR Code</Text>
+                            <Text style={styles.title}>Data e Hora</Text>
                         </View>
 
                         <FlatList
