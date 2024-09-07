@@ -4,7 +4,7 @@ import { Dimensions } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 const backVH = height * 0.50; // 5vw
-const fontSizeVW = width* 0.08; // 5vh
+const fontSizeVW = width * 0.08; // 5vh
 
 
 const styles = StyleSheet.create({
@@ -14,11 +14,10 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         marginBottom: "10%",
-
     },
     image: {
-        width: 300,
-        height: 300,
+        width: 250,
+        height: 250,
     },
     section: {
         width: '100%',

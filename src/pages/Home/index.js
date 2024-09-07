@@ -3,17 +3,19 @@ import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import styles from "./styles";
 import { Dimensions } from "react-native";
+import { SelectList } from 'react-native-dropdown-select-list'
 
 
 export default function Home() {
     const route = useRoute()
     const navegacao = useNavigation()
-    const [selected, setSelected] = React.useState("3ºAndar");
-    const [salas, setSalas] = React.useState("");
-
     const { width, height } = Dimensions.get('window');
+    
     const fontSizeVW = width * 0.06; // 5vw
     const fontSizeVH = height * 0.68; // 5vh
+    
+    const [selected, setSelected] = React.useState("3ºAndar");
+    const [salas, setSalas] = React.useState("");
 
     
 
@@ -55,7 +57,7 @@ export default function Home() {
 
     return (
         <SafeAreaView>
-            <ScrollView style={{display: 'flex'}}>
+            <ScrollView style={{ display: 'flex' }}>
                 <View style={styles.background}>
 
                     <View style={styles.header}>
@@ -64,13 +66,14 @@ export default function Home() {
                             source={require('../../../assets/images/ilustracaoQr.png')}
                         >
                         </Image>
-                </View>
+                    </View>
                     <ImageBackground
                         source={require('../../../assets/images/BackgroundInv.png')}
                         resizeMode="cover"
 
-                        style={{   
-                        height: fontSizeVH}}
+                        style={{
+                            height: fontSizeVH
+                        }}
                     >
                         <View style={styles.section}>
 
@@ -128,12 +131,3 @@ export default function Home() {
         </SafeAreaView>
     )
 }
-
-import { SelectList } from 'react-native-dropdown-select-list'
-
-const App = () => {
-
-
-
-
-};
