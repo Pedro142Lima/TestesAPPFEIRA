@@ -1,12 +1,12 @@
 import { View, Text, ImageBackground, Image, TouchableOpacity, ScrollView, SafeAreaView } from "react-native";
 import React from "react";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import styles from "./styles";
 import { Dimensions } from "react-native";
 
 
 export default function Home() {
-
+    const route = useRoute()
     const navegacao = useNavigation()
     const [selected, setSelected] = React.useState("3ºAndar");
     const [salas, setSalas] = React.useState("");
@@ -15,6 +15,12 @@ export default function Home() {
     const fontSizeVW = width * 0.06; // 5vw
     const fontSizeVH = height * 0.68; // 5vh
 
+    
+
+   
+  
+
+    
     const data = [
         { key: '3ºAndar', value: '3ºAndar', },
         { key: '2ºAndar', value: '2ºAndar' },
@@ -107,7 +113,10 @@ export default function Home() {
                             </View>
                             <TouchableOpacity
                                 style={styles.escanear}
-                                onPress={() => navegacao.navigate('Leitor')}
+                                onPress={() => navegacao.navigate('Leitor', {
+                                    selectedAndar: selected,
+                                    selectedSala: salas
+                                  })}
                             >
 
                                 <Text style={styles.textEscanear}>ESCANEAR</Text>
